@@ -1,0 +1,149 @@
+@use "../../foundation/vars";
+@use "../../foundation/colors";
+@use "../../foundation/mixin";
+
+.p-article {
+  margin-top: 40px;
+}
+
+.p-article__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-article__left {
+  width: 100%;
+
+  @include mixin.mq-up() {
+    width: calc(100% - 290px);
+  }
+}
+
+.p-article__right {
+  @include mixin.mq-up() {
+    max-width: 270px;
+    margin-top: 30px;
+  }
+}
+
+.p-article__title {
+  font-size: 26px;
+  font-weight: vars.$fw-500;
+  color: colors.$color-F56C2C;
+  margin-bottom: 10px;
+}
+
+.p-article__figure {
+  margin-bottom: 10px;
+}
+
+.p-article__desc {
+  font-size: 14px;
+}
+
+.p-article__heading {
+  margin-bottom: 20px;
+}
+
+.p-article__content h2 {
+  font-size: 22px;
+  font-weight: vars.$fw-500;
+  color: colors.$color-F56C2C;
+}
+
+.p-article__content h3 {
+  font-size: 20px;
+  font-weight: vars.$fw-500;
+  color: colors.$color-F56C2C;
+}
+
+.p-article__content p {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.p-article__content img {
+  margin-bottom: 10px;
+}
+
+.p-article__content a {
+  color: colors.$color-F56C2C;
+}
+
+.p-article__content a:hover {
+  text-decoration: underline;
+}
+
+.p-article__content ul {
+  padding-left: 25px;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.p-article__content li {
+  margin-top: 10px;
+}
+
+.p-article__content li:first-child {
+  margin-top: 0;
+}
+
+.p-article__content ul,
+.p-article__content li {
+  list-style: disc;
+}
+
+.p-article__related-heading {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.p-article__related-icon {
+  display: inline-flex;
+}
+
+.p-article__related-icon svg {
+  width: 24px;
+  height: 24px;
+  color: colors.$color-F56C2C;
+}
+
+.p-article__related-sub {
+  font-size: 22px;
+  font-weight: vars.$fw-500;
+}
+
+.p-article__related-list,
+.p-article__related-item {
+  list-style: disc;
+}
+
+.p-article__related-list {
+  padding-left: 30px;
+}
+
+.p-article__related-item {
+  margin-top: 8px;
+}
+
+.p-article__related-link {
+  font-size: 15px;
+}
+
+.p-article__related-link:hover {
+  text-decoration: underline;
+  color: colors.$color-F56C2C;
+}
+
+.p-article__related {
+  padding-top: 20px;
+  margin-top: 40px;
+  border-top: 1px solid colors.$color-F8F8F8;
+}
+
+.p-article__sibar-link:hover {
+  color: colors.$color-F56C2C;
+}

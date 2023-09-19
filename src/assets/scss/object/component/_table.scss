@@ -1,0 +1,70 @@
+@use "../../foundation/vars";
+@use "../../foundation/colors";
+@use "../../foundation/mixin";
+
+.c-table {
+  width: 100%;
+  caption-side: bottom;
+  border-collapse: collapse;
+
+  @include mixin.mq-down() {
+    width: calc(100% + 16px);
+  }
+}
+
+.c-table tbody {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+.c-table tr:nth-child(odd) {
+  background-color: rgba($color: colors.$color-F56C2C, $alpha: 0.2);
+}
+
+.c-table tr:nth-child(even) {
+  background-color: rgba($color: colors.$color-F56C2C, $alpha: 0.4);
+}
+
+.c-table tr:nth-child(1) {
+  background-color: rgba($color: colors.$color-F56C2C, $alpha: 0.8);
+}
+
+.c-table tr td:first-child {
+  width: 20%;
+}
+
+.c-table tr td {
+  min-width: 60px;
+  border: 2px solid colors.$color-F8F8F8;
+  padding: 10px;
+  text-align: justify;
+
+  @include mixin.mq-down() {
+    font-size: 10px;
+    text-align: left;
+  }
+}
+
+.c-table__heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-table__title {
+  font-size: 18px;
+  font-weight: vars.$fw-500;
+  color: colors.$color-FFFFFF;
+  text-align: center;
+
+  @include mixin.mq-down() {
+    font-size: 16px;
+  }
+}
+
+.c-table__sub-title {
+  font-size: 13px;
+  color: colors.$color-FFFFFF;
+}

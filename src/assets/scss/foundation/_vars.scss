@@ -1,0 +1,29 @@
+/* ======== Font family ======== */
+$font-global: "Roboto", sans-serif;
+
+/* ======== Font weight ======== */
+$fw-100: 100;
+$fw-300: 300;
+$fw-400: 400;
+$fw-500: 500;
+$fw-700: 700;
+
+/* ======== Breakpoint ======== */
+$breakpoint-up: (
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 1024px)",
+) !default;
+$breakpoint-down: (
+  "md": "screen and (max-width: 767px)",
+  "lg": "screen and (max-width: 1023px)",
+) !default;
+
+$ico-home: url('/assets/images/ico_home.png');
+$ico-polygon: url('/assets/images/ico_polygon.png');
+$ico-title: url('/assets/images/ico_title.png');
+$ico-close: url('/assets/images/ico_close.png');
+$ico-youtube: url('/assets/images/ico_youtube.png');
+$bg-line: url('/assets/images/bg_border-00.png');
+$bg-line-lg: url('/assets/images/bg_border-01.png');
+$bg-circle: url('/assets/images/bg_circle.png');
+$bg-info: url('/assets/images/bg_info.png');

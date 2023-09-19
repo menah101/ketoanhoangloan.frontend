@@ -1,0 +1,64 @@
+@use "../../foundation/mixin";
+@use "../../foundation/colors";
+
+@include mixin.mq-down() {
+  [data-media]:not([data-media~="sp"]) {
+    display: none;
+  }
+}
+
+@include mixin.mq-up() {
+  [data-media]:not([data-media~="pc"]) {
+    display: none;
+  }
+}
+
+.u-overflow-hidden {
+  overflow: hidden;
+}
+
+.u-d-block {
+  display: block;
+}
+
+.u-d-flex {
+  display: flex;
+}
+
+.u-d-inline-flex {
+  display: inline-flex;
+}
+
+.u-justify-content {
+  justify-content: center;
+}
+
+.u-d-contents {
+  display: contents;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-color-63BADD {
+  color: colors.$color-63BADD;
+}
+
+.u-fade {
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out;
+
+  &.is-faded {
+    opacity: 1;
+  }
+}
+
+.u-hover-opacity {
+  @include mixin.mq-up() {
+    transition: opacity 0.4s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

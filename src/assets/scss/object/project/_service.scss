@@ -1,0 +1,85 @@
+@use "../../foundation/colors";
+@use "../../foundation/mixin";
+@use "../../foundation/vars";
+
+.p-service {
+  width: 100%;
+  background-color: colors.$color-F5F5F5;
+  border: 1px solid colors.$color-F56C2C;
+  border-radius: 8px;
+}
+
+.p-service__wrapper {
+  @include mixin.mq-up() {
+    padding: 40px;
+  }
+
+  @include mixin.mq-down() {
+    padding: 16px;
+  }
+}
+
+.p-service__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mixin.mq-up() {
+    gap: 20px;
+  }
+
+  @include mixin.mq-down() {
+    gap: 18px;
+  }
+}
+
+.p-service__item {
+  box-shadow: 0 0 15px rgba($color: colors.$color-000000, $alpha: 0.2);
+
+  @include mixin.mq-up() {
+    width: calc((100% / 2) - 10px);
+  }
+
+  @include mixin.mq-down() {
+    width: 100%;
+  }
+}
+
+.p-service__link {
+  position: relative;
+}
+
+.p-service__link:hover {
+  opacity: 0.8;
+}
+
+.p-service__content {
+  width: 100%;
+  height: 100%;
+  background: rgba($color: colors.$color-000000, $alpha: 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-service__title {
+  font-weight: vars.$fw-500;
+  color: colors.$color-FFFFFF;
+
+  @include mixin.mq-up() {
+    font-size: 24px;
+  }
+
+  @include mixin.mq-down() {
+    font-size: 18px;
+  }
+}
+
+.p-service__desc {
+  font-size: 14px;
+  color: colors.$color-FFFFFF;
+}

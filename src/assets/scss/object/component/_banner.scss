@@ -1,0 +1,69 @@
+@use "../../foundation/vars";
+@use "../../foundation/colors";
+@use "../../foundation/mixin";
+
+.c-banner {
+  position: relative;
+}
+
+.c-banner__bg {
+  @include mixin.mq-up() {
+    height: 240px;
+  }
+
+  @include mixin.mq-down() {
+    height: 190px;
+  }
+}
+
+.c-banner__bg::after {
+  content: "";
+  background-color: rgba($color: colors.$color-000000, $alpha: 0.5);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+.c-banner__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c-banner__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.c-banner__title {
+  color: colors.$color-FFFFFF;
+  text-transform: uppercase;
+  font-weight: vars.$fw-500;
+  text-align: center;
+  line-height: 1;
+
+  @include mixin.mq-up() {
+    font-size: 32px;
+  }
+
+  @include mixin.mq-down() {
+    font-size: 22px;
+  }
+}
+
+.c-banner__title--sub {
+  text-transform: none;
+  font-weight: vars.$fw-300;
+
+  @include mixin.mq-up() {
+    font-size: 18px;
+  }
+
+  @include mixin.mq-down() {
+    font-size: 14px;
+  }
+}

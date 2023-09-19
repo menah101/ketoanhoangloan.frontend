@@ -1,0 +1,63 @@
+@use "../../foundation/mixin";
+@use "../../foundation/vars";
+@use "../../foundation/colors";
+
+.p-header-menu {
+  height: 48px;
+}
+
+.p-header-menu__list {
+  height: 100%;
+  display: flex;
+  column-gap: 16px;
+
+  @include mixin.mq-down() {
+    column-gap: 2px;
+  }
+}
+
+.p-header-menu__item {
+  height: inherit;
+  position: relative;
+
+  @include mixin.mq-up() {
+    padding: 12px;
+  }
+
+  @include mixin.mq-down() {
+    padding: 6px;
+  }
+}
+
+.p-header-menu__item:hover::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: colors.$color-F56C2C;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.p-header-menu__item.is-active::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: colors.$color-F56C2C;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.p-header-menu__link {
+  height: inherit;
+  font-size: 14px;
+  color: colors.$color-737373;
+  display: flex;
+  align-items: center;
+}
+
+.p-header-menu__item:hover .p-header-menu__link,
+.p-header-menu__item.is-active .p-header-menu__link {
+  color: colors.$color-3D3D3D;
+}

@@ -1,0 +1,94 @@
+@use "../../foundation/vars";
+@use "../../foundation/colors";
+@use "../../foundation/mixin";
+
+.c-pagination {
+  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-pagination__pages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 200px;
+}
+
+.c-pagination__page-number {
+  cursor: pointer;
+  background-color: colors.$color-FFFFFF;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .4s ease;
+}
+
+.c-pagination__page-number.is-active {
+  font-size: 16px;
+  height: 40px;
+  width: 40px;
+  background-color: colors.$color-F56C2C;
+  color: colors.$color-FFFFFF;
+}
+
+.c-pagination__arrow {
+  font-size: 20px;
+  width: 120px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: colors.$color-F56C2C;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mixin.mq-down() {
+    padding: 8px;
+    font-size: 16px;
+  }
+}
+
+.c-pagination__arrow--next {
+  margin-left: 20px;
+
+  @include mixin.mq-down() {
+    margin-left: 5px;
+  }
+}
+
+.c-pagination__arrow--prev {
+  margin-right: 20px;
+
+  @include mixin.mq-down() {
+    margin-right: 5px;
+  }
+}
+
+.c-pagination__nav-text {
+  font-size: initial;
+  letter-spacing: 0.3em;
+
+  @include mixin.mq-down() {
+    font-size: 14px;
+  }
+}
+
+.c-pagination__arrow:hover {
+  color: colors.$color-F56C2C;
+}
+
+.c-pagination__arrow:disabled {
+  background-color: transparent;
+  color: colors.$color-C0C0C0;
+  cursor: not-allowed;
+}

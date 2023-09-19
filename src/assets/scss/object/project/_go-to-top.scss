@@ -1,0 +1,62 @@
+@use "../../foundation/colors";
+@use "../../foundation/mixin";
+
+.p-go-top {
+  position: relative;
+  z-index: 100;
+}
+
+.p-go-top__link {
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  border-radius: 100%;
+  background: transparent;
+  border: 1px solid colors.$color-000000;
+  display: flex;
+  justify-content: center;
+
+  @include mixin.mq-up() {
+    bottom: 80px;
+    right: 60px;
+  }
+
+  @include mixin.mq-down() {
+    bottom: 60px;
+    right: 20px;
+  }
+}
+
+.p-go-top__link:hover {
+  opacity: 0.7;
+}
+
+.p-go-top__link::after {
+  content: '';
+  position: absolute;
+  height: 17px;
+  width: 1px;
+  background-color: colors.$color-000000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-go-top__link::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid colors.$color-000000;
+  border-left: 1px solid colors.$color-000000;
+  transform: rotate(45deg);
+  top: 15px;
+}
+
+.p-go-top__link.is-fixed {
+  position: fixed;
+}
+
+.p-go-top__icon {
+  width: 48px;
+}

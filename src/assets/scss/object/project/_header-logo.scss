@@ -1,0 +1,11 @@
+@use "../../foundation/mixin";
+
+.p-header-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-header-logo__img {
+  border-radius: 6px;
+}

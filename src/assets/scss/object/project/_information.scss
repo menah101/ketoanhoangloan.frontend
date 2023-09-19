@@ -1,0 +1,15 @@
+@use "../../foundation/colors";
+
+.p-information {
+  margin-bottom: 16px;
+}
+
+.p-information__inner {
+  padding: 10px 16px;
+  border: 1px solid colors.$color-F56C2C;
+  border-radius: 8px;
+}
+
+.p-information__text {
+  font-size: 14px;
+}

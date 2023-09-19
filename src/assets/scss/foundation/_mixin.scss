@@ -1,0 +1,20 @@
+@use "vars";
+@use "colors";
+
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get(vars.$breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get(vars.$breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin text-gradient($gradient: colors.$gradient-00F7EF33-FF004F33) {
+  background:  $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

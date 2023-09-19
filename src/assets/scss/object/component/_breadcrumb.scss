@@ -1,0 +1,67 @@
+@use "../../foundation/vars";
+@use "../../foundation/colors";
+@use "../../foundation/mixin";
+
+.c-breadcrumb {
+  width: 100%;
+  padding: 16px 0;
+}
+
+.c-breadcrumb__content {
+  width: 100%;
+  height: 100%;
+}
+
+.c-breadcrumb__list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-breadcrumb__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.c-breadcrumb__item::after {
+  content: '';
+  height: 16px;
+  width: 16px;
+  background: url('/assets/images/right_arrow.svg') no-repeat;
+  background-size: cover;
+  margin: 0 8px;
+}
+
+.c-breadcrumb__item:last-child::after {
+  content: unset;
+}
+
+.c-breadcrumb__link {
+  font-size: 13px;
+  color: colors.$color-737373;
+}
+
+.c-breadcrumb__link:hover {
+  color: colors.$color-3D3D3D;
+}
+
+.c-breadcrumb__item:last-child .c-breadcrumb__link {
+  color: colors.$color-F56C2C;
+}
+
+.c-breadcrumb__link--home {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 4px;
+}
+
+.c-breadcrumb__icon {
+  display: flex;
+  align-items: center;
+}
+
+.c-breadcrumb__icon svg {
+  width: 18px;
+  height: 18px;
+}

@@ -1,0 +1,160 @@
+@use "../../foundation/vars";
+@use "../../foundation/colors";
+@use "../../foundation/mixin";
+
+.p-about {
+  margin-top: 40px;
+}
+
+.p-about__information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-about__figure {
+   width: 200px;
+   height: 200px;
+}
+
+.p-about__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.p-about__content {
+  margin-top: 20px;
+}
+
+.p-about__name {
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.p-about__email {
+  font-size: 16px;
+  text-align: center;
+  color: colors.$color-404040;
+}
+
+.p-about__history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.p-about__history-list {
+  margin-top: 40px;
+}
+
+.p-about__history-wrap {
+  max-width: 880px;
+}
+
+.p-about__history-month {
+  padding: 0 0 40px 43px;
+  display: flex;
+
+  @include mixin.mq-up() {
+    padding: 0 0 56px 43px;
+  }
+
+  &--01 {
+    padding: 0 0 48px 43px;
+
+    @include mixin.mq-up() {
+      padding: 0 0 34px 43px;
+    }
+  }
+
+  &--02 {
+    padding: 0 0 40px 43px;
+  }
+
+  &--03 {
+    padding: 0 0 0 43px;
+    position: relative;
+  }
+
+  &--04 {
+    padding: 0 0 0 43px;
+    position: relative;
+  }
+}
+
+.p-about__history-dot {
+  background-color: colors.$color-F56C2C;
+  min-width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.p-about__history-item {
+  display: block;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50px;
+    width: 1px;
+    height: 100%;
+    background-color: colors.$color-F56C2C;
+    z-index: -1;
+  }
+
+  &:last-child {
+    .p-about__history-month:last-child .p-about__history-dot::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: calc(100% - 21px);
+      bottom: 0;
+      background-color: colors.$color-F56C2C;
+      left: 50px;
+    }
+  }
+}
+
+.p-about__history-year {
+  width: 300px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: colors.$color-F56C2C;
+  color: colors.$color-FFFFFF;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: vars.$fw-500;
+  margin-bottom: 40px;
+  padding: 0 12px;
+}
+
+.p-about__history-content {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.p-about__history-month-num {
+  font-size: 18px;
+  font-weight: vars.$fw-500;
+  min-width: 69px;
+}
+
+.p-about__history-month-text {
+  padding-top: 8px;
+  font-size: 14px;
+  line-height: 1.8;
+
+  @include mixin.mq-up() {
+    font-size: 16px;
+    line-height: 1.6;
+    padding-top: 2px;
+  }
+}

@@ -1,0 +1,20 @@
+@use "../foundation/mixin";
+@use "../foundation/colors";
+
+.l-header {
+  border-bottom: 1px solid colors.$color-E5E5E5;
+}
+
+.l-header__inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include mixin.mq-up() {
+    column-gap: 20px;
+  }
+
+  @include mixin.mq-down() {
+    column-gap: 10px;
+  }
+}

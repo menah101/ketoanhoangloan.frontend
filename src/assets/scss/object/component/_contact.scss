@@ -1,0 +1,56 @@
+@use "../../foundation/vars";
+@use "../../foundation/colors";
+@use "../../foundation/mixin";
+
+.c-contact {
+  margin-top: 60px;
+}
+
+.c-contact__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.c-contact__title {
+  font-size: 28px;
+  font-weight: vars.$fw-500;
+  color: colors.$color-F56C2C;
+  text-transform: uppercase;
+}
+
+.c-contact__desc {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.c-contact__hotline {
+  width: 100%;
+  max-width: 800px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgba($color: colors.$color-737373, $alpha: 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.c-contact__tel {
+  font-size: 28px;
+  color: colors.$color-F56C2C;
+}
+
+.c-contact__tel span {
+  font-size: 18px;
+  margin-right: 4px;
+  font-weight: vars.$fw-500;
+}
+
+.c-contact__time {
+  font-size: 14px;
+  margin-top: 4px;
+}

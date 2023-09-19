@@ -1,0 +1,32 @@
+@use "../foundation/colors";
+.l-footer {
+  width: 100%;
+  padding: 10px 0;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+.l-footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.l-footer__social-list {
+  display: flex;
+  column-gap: 10px;
+}
+
+.l-footer__social-icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.l-footer__copyright {
+  font-size: 14px;
+}
+
+.l-footer__social-link:hover svg {
+  color: colors.$color-F56C2C;
+}
