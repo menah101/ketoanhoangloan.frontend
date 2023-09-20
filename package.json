@@ -4,7 +4,16 @@
   "description": "",
   "main": "index.js",
   "browserify": {
-    "transform": [["babelify", { "presets": ["@babel/preset-env"] }]]
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
   },
   "scripts": {
     "prepare": "husky install",
@@ -81,6 +90,7 @@
     "stylelint-scss": "^4.1.0"
   },
   "dependencies": {
+    "datatables.net-dt": "^1.13.6",
     "gsap": "^3.12.2",
     "ress": "^5.0.2",
     "smoothscroll-polyfill": "^0.4.4",

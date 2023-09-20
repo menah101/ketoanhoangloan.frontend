@@ -1,0 +1,155 @@
+@use "../../foundation/vars";
+@use "../../foundation/colors";
+@use "../../foundation/mixin";
+
+#dataTable_filter {
+  margin-bottom: 20px;
+  width: 280px;
+  margin-right: 3px;
+}
+
+#dataTable_filter input {
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: vars.$fw-400;
+  color: colors.$color-37352f;
+  padding: 6px 10px;
+}
+
+.c-datatable {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+#dataTable {
+  border: 1px solid colors.$color-F56C2C;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  min-width: 1000px;
+}
+
+#dataTable tbody {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+#dataTable tr:nth-child(odd) {
+  background-color: rgba($color: colors.$color-F56C2C, $alpha: 0.2);
+}
+
+#dataTable tr:nth-child(even) {
+  background-color: rgba($color: colors.$color-F56C2C, $alpha: 0.4);
+}
+
+#dataTable thead tr:first-child {
+  background-color: transparent;
+}
+
+#dataTable tr td:last-child {
+  width: 20%;
+}
+
+#dataTable tr td {
+  min-width: 60px;
+  padding: 10px;
+  text-align: justify;
+
+  @include mixin.mq-down() {
+    font-size: 10px;
+    text-align: left;
+  }
+}
+
+#dataTable .c-datatable__title {
+  font-size: 16px;
+  font-weight: vars.$fw-500;
+
+  @include mixin.mq-down() {
+    font-size: 14px;
+  }
+}
+
+#dataTable thead > tr > th.sorting_asc::before,
+#dataTable thead > tr > th.sorting_desc::after {
+  color: colors.$color-F56C2C;
+}
+
+.c-datatable__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.c-datatable__group-button {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.c-datatable__button {
+  height: 34px;
+  width: 68px;
+  border-radius: 8px;
+  border: 1px solid colors.$color-D7D7D7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.c-datatable__button:hover {
+  background-color: rgba(colors.$color-D7D7D7, $alpha: 0.6);
+}
+
+.c-datatable__button span {
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.c-datatable__icon {
+  display: flex;
+  align-items: center;
+}
+
+.c-datatable__text {
+  font-size: 14px;
+}
+
+#dataTable_info {
+  display: none !important;
+}
+
+#dataTable_paginate {
+  margin-bottom: 40px;
+}
+
+#dataTable_paginate .paginate_button {
+  font-size: 14px;
+}
+
+#dataTable_paginate .paginate_button.current {
+  border-radius: 100%;
+  background-color: colors.$color-F56C2C;
+  color: colors.$color-FFFFFF !important;
+  border: 1px solid colors.$color-F56C2C !important;
+}
+
+#dataTable_paginate .paginate_button:hover {
+  border-radius: 100%;
+  background: colors.$color-F56C2C !important;
+  color: colors.$color-FFFFFF !important;
+  border: 1px solid colors.$color-F56C2C !important;
+}
+
+#dataTable_paginate .paginate_button.next {
+  color: colors.$color-37352f;
+}
+
+#dataTable_paginate .paginate_button.previous:hover,
+#dataTable_paginate .paginate_button.next:hover {
+  border-radius: 0 !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  color: colors.$color-F56C2C !important;
+}
+

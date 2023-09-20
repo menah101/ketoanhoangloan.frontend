@@ -89,6 +89,18 @@
   column-gap: 4px;
 }
 
+.p-category__more-link--add {
+  border: 1px solid colors.$color-F56C2C;
+  height: 35px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
 .p-category__more-link:hover {
   color: colors.$color-F56C2C;
 }

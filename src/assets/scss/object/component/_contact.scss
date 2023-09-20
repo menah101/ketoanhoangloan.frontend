@@ -4,14 +4,18 @@
 
 .c-contact {
   margin-top: 60px;
+  display: flex;
+  justify-content: center;
 }
 
 .c-contact__wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 12px;
+  padding: 40px 12px;
+  border-radius: 20px;
 }
 
 .c-contact__title {
@@ -22,9 +26,10 @@
 }
 
 .c-contact__desc {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 20px;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .c-contact__hotline {
