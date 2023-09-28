@@ -21,6 +21,9 @@
   padding: 10px;
 }
 
+
+.p-form__form-textarea:focus,
+.p-form__form-select:focus,
 .p-form__form-input:focus {
   border: 1px solid colors.$color-63BADD;
 }
