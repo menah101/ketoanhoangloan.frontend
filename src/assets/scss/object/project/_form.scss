@@ -27,6 +27,8 @@
 
 .p-form__form-label {
   font-size: 16px;
+  font-weight: vars.$fw-500;
+  margin-bottom: 4px;
 }
 
 .p-form__form-error {
@@ -69,4 +71,10 @@
 
 .p-form {
   padding-bottom: 40px;
+}
+
+.p-form__form-editor {
+  height: 500px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
