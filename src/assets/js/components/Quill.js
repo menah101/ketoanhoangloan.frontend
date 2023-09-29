@@ -1,6 +1,5 @@
 import Quill from 'quill'
 import 'quill-paste-smart'
-// import '../../../../node_modules/quill/dist/quill.snow.css'
 
 const onQuill = () => {
   const elementQuill = document.getElementById('editor')

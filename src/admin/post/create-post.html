@@ -146,7 +146,7 @@
                 <div class="p-form__form-row">
                   <div class="p-form__form-group">
                     <label class="p-form__form-label">Thumbnail:</label>
-                    <input type="file">
+                    <input type="file" class="js-upload-file">
                     <div class="p-form__form-error">Vui lòng chọn hình ảnh.</div>
                   </div>
                 </div>
@@ -160,13 +160,14 @@
                 <div class="p-form__form-row">
                   <div class="p-form__form-group">
                     <label class="p-form__form-label">Nội dung:</label>
-                    <textarea class="p-form__form-textarea" rows="4"></textarea>
+                    <div class="p-form__form-editor" id="editor"></div>
                     <div class="p-form__form-error">Vui lòng nhập nội dung.</div>
                   </div>
                 </div>
                 <div class="p-form__form-column">
-                  <div class="p-form__form-row">
+                  <div class="p-form__form-row p-form__form-row--btn">
                     <button type="submit" class="p-form__form-btn">Thêm</button>
+                    <a href="" class="p-form__form-btn p-form__form-btn--delete">Hủy</a>
                   </div>
                 </div>
               </form>

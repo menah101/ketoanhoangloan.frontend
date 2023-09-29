@@ -48,6 +48,11 @@
   width: 100%;
 }
 
+.p-form__form-row--btn {
+  display: flex;
+  gap: 20px;
+}
+
 .p-form__form-figure {
   width: 300px;
   height: 180px;
@@ -70,6 +75,19 @@
   font-size: 14px;
   border-radius: 8px;
   margin-top: 30px;
+}
+
+.p-form__form-btn:hover {
+  background-color: colors.$color-D7D7D7;
+}
+
+.p-form__form-btn--delete {
+  background-color: colors.$color-D7D7D7;
+  border: 1px solid colors.$color-D7D7D7;
+}
+
+.p-form__form-btn--delete:hover {
+  border: 1px solid colors.$color-F56C2C;
 }
 
 .p-form {

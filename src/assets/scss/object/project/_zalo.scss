@@ -1,0 +1,99 @@
+@use "../../foundation/colors";
+@use "../../foundation/mixin";
+@use "../../foundation/vars";
+
+.p-zalo {
+  position: fixed;
+  right: 60px;
+  bottom: 150px;
+  z-index: 999;
+}
+
+.p-zalo__wrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-zalo__link {
+  height: 100%;
+  width: 100%;
+}
+
+.p-zalo__figure {
+  display: inline-block;
+  background-color: colors.$color-1182FC;
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.p-zalo__img {
+  height: 100%;
+  width: 100%;
+}
+
+.p-zalo__cirlce {
+  width: 52px;
+  height: 52px;
+  top: -1px;
+  right: -1px;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 2px solid rgba(17, 130, 252, .8);
+  opacity: .1;
+  border-color: #1182FC;
+  opacity: .5;
+  animation-name: zoomIn_zalo;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.p-zalo__cirlce-fill {
+  width: 64px;
+  height: 64px;
+  top: -7px;
+  right: -7px;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  transition: all .5s;
+  background-color: rgba(17, 130, 252, 0.45);
+  opacity: .75;
+  animation-name: zoomIn_zalo;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes zoomIn_zalo {
+	from {
+		opacity: 0;
+		transform: scale3d(.5, .5, .5);
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+@keyframes pulse_zalo {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}

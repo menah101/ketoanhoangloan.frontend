@@ -1,4 +1,6 @@
 export default {
+  SELECTOR_UPLOAD_FILE: '.js-upload-file',
+  SELECTOR_PREVIEW_IMAGE: '.js-preview-img',
   SELECTOR_TOGGLE_COLLAPSE: '.js-toggle-collapse',
   SELECTOR_GO_TOP_LINK: '.js-go-top-link',
   SELECTOR_GO_TOP: '.js-go-top',

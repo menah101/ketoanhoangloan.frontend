@@ -4,6 +4,7 @@ import onScrollTop from './components/ScrollTop'
 import onCollapse from './components/CollapseFaq'
 import onDataTable from './components/DataTable'
 import onQuill from './components/Quill'
+import onPreviewImage from './components/PreviewImage'
 
 const init = () => {
   onClickAnchorLink()
@@ -12,6 +13,7 @@ const init = () => {
   onCollapse()
   onDataTable()
   onQuill()
+  onPreviewImage()
 }
 
 document.addEventListener('DOMContentLoaded', init)
