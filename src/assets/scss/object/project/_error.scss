@@ -1,0 +1,56 @@
+@use "../../foundation/colors";
+@use "../../foundation/mixin";
+@use "../../foundation/vars";
+
+
+.p-error {
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.p-error__heading {
+  font-size: 28px;
+  font-weight: vars.$fw-500;
+}
+
+.p-error__content {
+  margin-top: 40px;
+  background-color: rgba($color: colors.$color-737373, $alpha: .08);
+  padding: 20px;
+}
+
+.p-error__title {
+  font-size: 18px;
+  font-weight: vars.$fw-500;
+}
+
+.p-error__list {
+  margin-top: 10px;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.p-error__item {
+  list-style: disc;
+}
+
+.p-error__text {
+  font-size: 14px;
+}
+
+.p-error__link {
+  border: 1px solid colors.$color-F56C2C;
+  height: 35px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 8px;
+  margin-top: 10px;
+
+  &:hover {
+    color: colors.$color-F56C2C;;
+  }
+}
+

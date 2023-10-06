@@ -4,9 +4,17 @@
 
 .p-zalo {
   position: fixed;
-  right: 60px;
-  bottom: 150px;
   z-index: 999;
+
+  @include mixin.mq-up() {
+    right: 60px;
+    bottom: 150px;
+  }
+
+  @include mixin.mq-down() {
+    right: 20px;
+    bottom: 130px;
+  }
 }
 
 .p-zalo__wrapper {
